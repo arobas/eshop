@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eTrgovina</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="js/all.js"></script>
+</head>
+<body ng-app="app">
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-12 jumbotron">
+            <h1>Produkti</h1>
+
+            <app-example></app-example>
+
+
+            <div class="well">
+                <!-- Navbar -->
+                <ul>
+                
+                <li><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="categories">Akcije</a></li>
+                <li><a ui-sref="articles">Izdelki</a></li>
+                <li><a ui-sref="description">Opis izdelka</a></li>
+                <li><a ui-sref="basket">Košarica</a></li>
+                <li><a ui-sref="userinfo">Uporabnik</a></li>
+                <li><a ui-sref="about">O nas</a></li>
+                <li><a ui-sref="privacy">Politika zasebnosti</a></li>
+                </ul>
+            </div>
+
+            <div class="well">
+                <ui-view></ui-view>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
