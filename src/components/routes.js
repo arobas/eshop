@@ -11,7 +11,10 @@ angular.module('app').config(function($stateProvider, $urlRouterProvider){
     $stateProvider.state('categories',
 	{
 		url: '/categories',
-		template: '<h1>Akcije</h1>'
+		templateUrl: 'templates/categories.html',
+        controller: function($scope, CategoryFactory) {
+            $scope.categories = CategoryFactory.query({});
+        }
 	}); 
     
     $stateProvider.state('articles',
