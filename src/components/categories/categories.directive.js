@@ -1,12 +1,12 @@
-angular.module('app').directive('categoriesList', function(){
+/*angular.module('app').directive('categoriesList', function(){
 
     return {
         restrict: 'E',
-        templateUrl: 'templates/categories.directive.html',
+        templateUrl: 'templates/categories.html',
         controller: function($scope){
 
             
             }
 
         }
-});
+});*/
