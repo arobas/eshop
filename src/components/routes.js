@@ -20,13 +20,19 @@ angular.module('app').config(function($stateProvider, $urlRouterProvider){
     $stateProvider.state('articles',
 	{
 		url: '/articles',
-		template: '<h1>Izdelki</h1>'
+		templateUrl: 'templates/products.html',
+        controller: function($scope, ProductsFactory) {
+            $scope.products = ProductsFactory.query({});
+        }
 	}); 
     
-        $stateProvider.state('description',
+        $stateProvider.state('details',
 	{
-		url: '/description',
-		template: '<h1>Opis izdelka</h1>'
+		url: '/products/:id',
+		templateUrl: 'templates/product.html',
+        controller: function($scope, ProductsFactory, $stateParams) {
+            $scope.product = ProductsFactory.get({id: $stateParams.id});
+        }
 	}); 
     
         $stateProvider.state('basket',
