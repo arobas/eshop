@@ -1,6 +1,10 @@
 <div class="col-xs-9 well">
        <div ng-repeat='product in products'>
            <h2>{{ product.name }}</h2>
-           <p>{{ product.description }}</p>
+           <a ui-sref="details({ id: product.id })">Preglej podrobnosti</a>
+           <p>{{ product.tagline }}</p>
+           <p>Cena: {{ product.price }}</p>
+           <p>Zaloga: {{ product.stock }}</p>
+           <p ng-hide="product.availableOn==null">Na voljo od:{{ product.availableOn }}</p><br>
        </div>
 </div>
