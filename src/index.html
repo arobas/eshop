@@ -7,20 +7,22 @@
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="../bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../bower_components/angular-locker/dist/angular-locker.js"></script>
     <script src="js/all.js"></script>
 </head>
 <body ng-app="app">
     <div class="container">
     <div class="row">
         <div class="col-xs-12 jumbotron">
-            <h1>Produkti</h1>
+            <h1>eTr</h1>
 
 
             
                 <!-- Navbar -->
               <initial-menu></initial-menu>
 
-            <div class="well">
+            <div class="well" ng-controller="ProductsController">
+               Košarica: {{ basket }}
                 <ui-view></ui-view>
             </div>
         </div>
